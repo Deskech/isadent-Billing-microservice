@@ -16,8 +16,8 @@ public class InterfaceTest {
         String  nombrePaciente = "jose manuel";
       QueryBill queryBillEntity = queryBillRepository.showBill(nombrePaciente);
       System.out.print(queryBillEntity.getPaymentCurrency());
-        System.out.print(queryBillEntity.getNombrePaciente());
-        System.out.print(nombrePaciente);
+        System.out.print(queryBillEntity.getPatientName());
+
 
     }
 }

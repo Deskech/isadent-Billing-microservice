@@ -23,20 +23,20 @@ public class AlterarPaymentTest {
     @Test
     public void mirar(){
         NewPaymentRequest newPaymentRequest = new NewPaymentRequest("jose manuel",900.00);
-        newPayment.alterarAbono(newPaymentRequest);
+        newPayment.alternatePayment(newPaymentRequest);
     }
 
     @Test
     public void repository(){
         String nombrePaciente = "jose manuel";
         QueryBillValues queryBillValues = queryBillValuesRepository.getRestanteAndAbono(nombrePaciente);
-        System.out.println(queryBillValues.getAbono());
+        System.out.println(queryBillValues.getPayment());
     }
     @Test
     public void repositoryJpa(){
         String nombrePaciente = "jose manuel";
         QueryBillEntity queryFactura = queryValuesJpaRepository.getRemainingAndPayment(nombrePaciente);
         assertNotNull(queryFactura);
-        System.out.println(queryFactura.getAbonoCurrency());
+        System.out.println(queryFactura.getPaymentCurrency());
     }
 }

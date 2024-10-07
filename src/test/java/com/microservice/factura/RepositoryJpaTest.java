@@ -18,10 +18,8 @@ public class RepositoryJpaTest {
     public void mostrarFactura(){
         String nombre = "jose manuel";
        QueryBillEntity queryBillEntity =  queryBillJpaRepository.showBill(nombre);
-       System.out.println(nombre);
-        System.out.println(queryBillEntity.getNombrePaciente());
-        System.out.println(queryBillEntity.getFacturaId());
+
         assertNotNull(queryBillEntity);
-        assertEquals("jose manuel", queryBillEntity.getNombrePaciente());
+        assertEquals("jose manuel", queryBillEntity.getPatientName());
     }
 }
