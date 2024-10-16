@@ -11,5 +11,5 @@ public interface NewPaymentReqMapper {
      * @param newPaymentRequest representation of newPaymentRequestObject but String
      * @return NewPaymentRequest instance
      */
-    NewPaymentRequest crear(String newPaymentRequest);
+    NewPaymentRequest create(String newPaymentRequest);
 }

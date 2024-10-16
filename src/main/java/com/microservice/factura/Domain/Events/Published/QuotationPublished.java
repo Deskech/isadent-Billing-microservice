@@ -1,4 +1,4 @@
-package com.microservice.factura.Domain.Events.Publicados;
+package com.microservice.factura.Domain.Events.Published;
 /**
  *
  * @param <T> (BillValues, NewQuotationMessage) is responsible to report the new BillValues and dentalProcedures when it is stored

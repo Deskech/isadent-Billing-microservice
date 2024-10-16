@@ -1,10 +1,10 @@
-package com.microservice.factura.Infraestructure.Events.Publicado;
+package com.microservice.factura.Infraestructure.Events.Published;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microservice.factura.Application.Dtos.NewQuotationMessage;
-import com.microservice.factura.Domain.Events.Publicados.QuotationPublished;
+import com.microservice.factura.Domain.Events.Published.QuotationPublished;
 import com.microservice.factura.Domain.Models.CommandLine.Aggregates.BillValues;
-import com.microservice.factura.Infraestructure.Events.Publicado.Dtos.QuotationPublishedEvent;
+import com.microservice.factura.Infraestructure.Events.Published.Dtos.QuotationPublishedEvent;
 import com.microservice.factura.Infraestructure.Factories.Interfaces.PublishedQuotationFactory;
 import lombok.SneakyThrows;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

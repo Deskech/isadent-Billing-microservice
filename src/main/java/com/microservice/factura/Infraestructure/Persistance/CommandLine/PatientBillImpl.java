@@ -1,6 +1,6 @@
 package com.microservice.factura.Infraestructure.Persistance.CommandLine;
 
-import com.microservice.factura.Domain.Events.Publicados.PatientPublished;
+import com.microservice.factura.Domain.Events.Published.PatientPublished;
 import com.microservice.factura.Domain.Models.CommandLine.Aggregates.PatientBill;
 import com.microservice.factura.Domain.Repository.CommandLine.PatientBillRepository;
 import com.microservice.factura.Infraestructure.Entity.CommandLine.WriteBillEntity;

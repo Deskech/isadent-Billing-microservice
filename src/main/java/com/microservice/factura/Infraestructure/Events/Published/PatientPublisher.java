@@ -1,7 +1,7 @@
-package com.microservice.factura.Infraestructure.Events.Publicado;
+package com.microservice.factura.Infraestructure.Events.Published;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.microservice.factura.Domain.Events.Publicados.PatientPublished;
+import com.microservice.factura.Domain.Events.Published.PatientPublished;
 import com.microservice.factura.Infraestructure.Entity.CommandLine.WriteBillEntity;
 import lombok.SneakyThrows;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

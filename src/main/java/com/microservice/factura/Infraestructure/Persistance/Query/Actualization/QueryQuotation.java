@@ -1,6 +1,6 @@
 package com.microservice.factura.Infraestructure.Persistance.Query.Actualization;
 
-import com.microservice.factura.Infraestructure.Events.Publicado.Dtos.QuotationPublishedEvent;
+import com.microservice.factura.Infraestructure.Events.Published.Dtos.QuotationPublishedEvent;
 import com.microservice.factura.Infraestructure.Repository.Query.Actualization.QueryQuotationActualization;
 import org.springframework.stereotype.Component;
 

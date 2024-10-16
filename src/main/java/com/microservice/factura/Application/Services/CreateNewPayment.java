@@ -20,7 +20,7 @@ public class CreateNewPayment {
      *
      * @param newPaymentRequest represents the new payment the patient's has done including his dame and the payment amount
      */
-    public void darNuevosValores(NewPaymentRequest newPaymentRequest) {
+    public void giveNewValues(NewPaymentRequest newPaymentRequest) {
         newPayment.alternatePayment(newPaymentRequest);
 
     }

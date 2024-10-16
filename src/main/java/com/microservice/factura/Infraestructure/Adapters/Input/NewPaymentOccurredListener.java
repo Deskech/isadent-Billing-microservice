@@ -3,7 +3,7 @@ package com.microservice.factura.Infraestructure.Adapters.Input;
 
 import com.microservice.factura.Application.Dtos.NewPaymentRequest;
 import com.microservice.factura.Application.Services.CreateNewPayment;
-import com.microservice.factura.Domain.Events.Ocurridos.PaymentOccurred;
+import com.microservice.factura.Domain.Events.Occurred.PaymentOccurred;
 import com.microservice.factura.Infraestructure.Mappers.Interfaces.NewPaymentReqMapper;
 import org.springframework.amqp.AmqpRejectAndDontRequeueException;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -29,12 +29,12 @@ public class NewPaymentOccurredListener implements PaymentOccurred<String> {
      */
    @RabbitListener(queues = "reportarAbonoFactura")
     @Override
-    public void listenNewAbono(String newPaymentRequest) {
+    public void listenNewPayment(String newPaymentRequest) {
         try {
             //1. map the newPaymentRequest object to an application layer
-            NewPaymentRequest newPaymentRequest2 = newPaymentReqMapper.crear(newPaymentRequest);
+            NewPaymentRequest newPaymentRequest2 = newPaymentReqMapper.create(newPaymentRequest);
             //2. update and store the patient's bill new monetary values
-            createNewPayment.darNuevosValores(newPaymentRequest2);
+            createNewPayment.giveNewValues(newPaymentRequest2);
         } catch (Exception e) {
             throw new AmqpRejectAndDontRequeueException(e.getMessage());
         }

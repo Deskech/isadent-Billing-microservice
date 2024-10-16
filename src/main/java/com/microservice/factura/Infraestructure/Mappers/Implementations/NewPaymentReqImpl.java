@@ -24,7 +24,7 @@ public class NewPaymentReqImpl implements NewPaymentReqMapper {
      * @return NewPaymentRequest instance
      */
     @Override
-    public NewPaymentRequest crear(String newPaymentRequest) {
+    public NewPaymentRequest create(String newPaymentRequest) {
         try {
             JsonNode jsonNode = objectMapper.readTree(newPaymentRequest);
             String patientName = jsonNode.get("patientName").asText();

@@ -47,7 +47,7 @@ public class FactoryBillValuesImpl implements FactoryBillValues {
         //We create a new Instance of Value Obj
         Payment newPayment = new Payment(payment);
         Remaining newRemaining = new Remaining(remainingPayment);
-        return  BillValues.updateValores(newPayment,total, paymentCurrency,totalCurrency, newRemaining, remainingPaymentCurrency);
+        return  BillValues.updateValues(newPayment,total, paymentCurrency,totalCurrency, newRemaining, remainingPaymentCurrency);
     }
 
     /**
@@ -70,7 +70,7 @@ public class FactoryBillValuesImpl implements FactoryBillValues {
         String paymentCurrency = currency.format(payment.getPaymentBill());
 
         // we set the Value Obj this is important for Persisting the values
-       return   BillValues.updateValores(payment, total, paymentCurrency,
+       return   BillValues.updateValues(payment, total, paymentCurrency,
                 totalCurrency, newRemaining, remainingPaymentCurrency);
     }
 }

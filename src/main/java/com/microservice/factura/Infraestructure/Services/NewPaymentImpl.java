@@ -1,7 +1,7 @@
 package com.microservice.factura.Infraestructure.Services;
 
 import com.microservice.factura.Application.Dtos.NewPaymentRequest;
-import com.microservice.factura.Domain.Events.Publicados.PaymentPublished;
+import com.microservice.factura.Domain.Events.Published.PaymentPublished;
 import com.microservice.factura.Domain.Factories.FactoryBillValues;
 import com.microservice.factura.Domain.Models.CommandLine.Aggregates.BillValues;
 import com.microservice.factura.Domain.Models.Query.QueryBillValues;

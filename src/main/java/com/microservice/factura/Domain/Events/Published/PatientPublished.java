@@ -1,4 +1,4 @@
-package com.microservice.factura.Domain.Events.Publicados;
+package com.microservice.factura.Domain.Events.Published;
 
 /**
  *

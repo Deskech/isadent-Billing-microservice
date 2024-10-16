@@ -1,4 +1,4 @@
-package com.microservice.factura.Domain.Events.Ocurridos;
+package com.microservice.factura.Domain.Events.Occurred;
 
 /**
  *
@@ -11,5 +11,5 @@ public interface PatientOccurred<T> {
      *
      * @param newPatient this represents an object comming from the Patients microservice.
      */
-    void listenNewPaciente(T newPatient);
+    void listenNewPatient(T newPatient);
 }

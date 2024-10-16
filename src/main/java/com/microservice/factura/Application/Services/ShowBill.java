@@ -22,7 +22,7 @@ public class ShowBill {
      * @param patientName represents the patient's name
      * @return QueryBill (formatted view of the bill)
      */
-    public QueryBill verFactura(PatientBillDto patientName){
+    public QueryBill bill(PatientBillDto patientName){
         String patientNameString = patientName.getPatientName();
         return queryBillRepository.showBill(patientNameString);
     }

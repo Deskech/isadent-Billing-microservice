@@ -1,4 +1,4 @@
-package com.microservice.factura.Infraestructure.Events.Ocurrido;
+package com.microservice.factura.Infraestructure.Events.Occurred;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -28,7 +28,7 @@ public class PatientOccurredListener {
      */
     @SneakyThrows
     @RabbitListener(queues = "pacienteActualizadoQueue")
-    public void savePaciente(String newPatient){
+    public void savePatient(String newPatient){
         //since we receive a String it is necessary to map it to the real Object
         WriteBillEntity writeBillEntity = objectMapper.readValue(newPatient, WriteBillEntity.class);
         // then map it to the Jpa entity to store it in the Query database

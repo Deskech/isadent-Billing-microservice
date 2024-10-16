@@ -1,9 +1,9 @@
-package com.microservice.factura.Infraestructure.Events.Publicado;
+package com.microservice.factura.Infraestructure.Events.Published;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.microservice.factura.Domain.Events.Publicados.PaymentPublished;
+import com.microservice.factura.Domain.Events.Published.PaymentPublished;
 import com.microservice.factura.Domain.Models.CommandLine.Aggregates.BillValues;
-import com.microservice.factura.Infraestructure.Events.Publicado.Dtos.PaymentPublishedEvent;
+import com.microservice.factura.Infraestructure.Events.Published.Dtos.PaymentPublishedEvent;
 import lombok.SneakyThrows;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;

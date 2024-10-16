@@ -1,7 +1,7 @@
 package com.microservice.factura.Infraestructure.Adapters.Input;
 
 import com.microservice.factura.Application.Services.SaveNewPatient;
-import com.microservice.factura.Domain.Events.Ocurridos.PatientOccurred;
+import com.microservice.factura.Domain.Events.Occurred.PatientOccurred;
 import com.microservice.factura.Domain.Factories.FactoryPatientBill;
 import com.microservice.factura.Domain.Models.CommandLine.Aggregates.PatientBill;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -26,7 +26,7 @@ public class NewPatientOccurredListener implements PatientOccurred<String> {
      */
     @RabbitListener(queues = "facturasQueue")
     @Override
-    public void listenNewPaciente(String newPatient) {
+    public void listenNewPatient(String newPatient) {
         try {
             //1. map the newPatient object to a domain model
             PatientBill patientBill = factoryPatientBill.toDomain(newPatient);

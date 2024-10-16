@@ -37,7 +37,7 @@ public class BillValuesMapperImpl implements BillValuesMapper {
             String abonoCurrency = valoresFacturaJson.get("paymentCurrency").asText();
             String totalCurrency = valoresFacturaJson.get("totalCurrency").asText();
             String restanteCurrency= valoresFacturaJson.get("remainingBalanceCurrency").asText();
-            return BillValues.updateValores(payment,total,abonoCurrency,totalCurrency, remaining,restanteCurrency);
+            return BillValues.updateValues(payment,total,abonoCurrency,totalCurrency, remaining,restanteCurrency);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }

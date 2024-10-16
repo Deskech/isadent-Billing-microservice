@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microservice.factura.Application.Dtos.NewQuotationMessage;
 import com.microservice.factura.Domain.Models.CommandLine.Aggregates.BillValues;
 import com.microservice.factura.Domain.Models.CommandLine.ValueObjects.ImprovementPlan;
-import com.microservice.factura.Infraestructure.Events.Publicado.Dtos.QuotationPublishedEvent;
+import com.microservice.factura.Infraestructure.Events.Published.Dtos.QuotationPublishedEvent;
 import com.microservice.factura.Infraestructure.Factories.Interfaces.PublishedQuotationFactory;
 import com.microservice.factura.Infraestructure.Mappers.Interfaces.BillValuesMapper;
 import com.microservice.factura.Infraestructure.Mappers.Interfaces.DentalProceduresMapper;

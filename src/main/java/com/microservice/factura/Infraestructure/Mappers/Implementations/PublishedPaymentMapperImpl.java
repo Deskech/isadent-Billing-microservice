@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microservice.factura.Domain.Models.CommandLine.Aggregates.BillValues;
-import com.microservice.factura.Infraestructure.Events.Publicado.Dtos.PaymentPublishedEvent;
+import com.microservice.factura.Infraestructure.Events.Published.Dtos.PaymentPublishedEvent;
 import com.microservice.factura.Infraestructure.Mappers.Interfaces.PublishedPaymentMapper;
 import com.microservice.factura.Infraestructure.Mappers.Interfaces.BillValuesMapper;
 import org.springframework.stereotype.Component;

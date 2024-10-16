@@ -3,7 +3,7 @@ package com.microservice.factura.Infraestructure.Adapters.Input;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microservice.factura.Application.Dtos.NewQuotationMessage;
 import com.microservice.factura.Application.Services.CreateNewQuotation;
-import com.microservice.factura.Domain.Events.Ocurridos.QuotationOccurred;
+import com.microservice.factura.Domain.Events.Occurred.QuotationOccurred;
 import lombok.SneakyThrows;
 import org.springframework.amqp.AmqpRejectAndDontRequeueException;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;

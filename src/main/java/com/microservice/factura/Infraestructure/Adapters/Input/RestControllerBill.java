@@ -28,8 +28,8 @@ public class RestControllerBill {
      */
     @CrossOrigin
     @PostMapping("/bill")
-    public QueryBill mostrar(@RequestBody PatientBillDto patientName) {
-        return showBill.verFactura(patientName);
+    public QueryBill getBill(@RequestBody PatientBillDto patientName) {
+        return showBill.bill(patientName);
     }
 
 }

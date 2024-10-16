@@ -21,7 +21,7 @@ public class AlterarPaymentTest {
     @Autowired
     private QueryValuesJpaRepository queryValuesJpaRepository;
     @Test
-    public void mirar(){
+    public void getBill(){
         NewPaymentRequest newPaymentRequest = new NewPaymentRequest("jose manuel",900.00);
         newPayment.alternatePayment(newPaymentRequest);
     }

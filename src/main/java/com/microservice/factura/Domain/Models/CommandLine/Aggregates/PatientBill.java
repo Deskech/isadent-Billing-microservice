@@ -22,7 +22,7 @@ public class PatientBill {
     * @param patientInformation (patient object). Must not be null.
     * @returns new patientBill object instance.
     */
-    public static PatientBill savePacienteFactura(Patient patientInformation){
+    public static PatientBill savePatientBill(Patient patientInformation){
         if (patientInformation == null) {
             throw new IllegalArgumentException("patient can not be null");
         }

@@ -1,4 +1,4 @@
-package com.microservice.factura.Infraestructure.Events.Publicado.Dtos;
+package com.microservice.factura.Infraestructure.Events.Published.Dtos;
 
 import com.microservice.factura.Domain.Models.CommandLine.Aggregates.BillValues;
 import lombok.Getter;

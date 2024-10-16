@@ -32,7 +32,7 @@ public class BillValues {
      * @params payment, total,remainingBalance, and its values in money format. Must not be null.
      * @returns a new instance of BillValues ready to be persisted.
      */
-    public static BillValues updateValores(Payment paymentBill, Total totalBill, String paymentCurrency, String totalCurrency, Remaining remainingBalance, String remainingBalanceCurrency){
+    public static BillValues updateValues(Payment paymentBill, Total totalBill, String paymentCurrency, String totalCurrency, Remaining remainingBalance, String remainingBalanceCurrency){
         if (paymentBill == null || totalBill == null || remainingBalance == null) {
             throw new IllegalArgumentException("Payment, totalBill or remainingBalance cannot be null");
         }

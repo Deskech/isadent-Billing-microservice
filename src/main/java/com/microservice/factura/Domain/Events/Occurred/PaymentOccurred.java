@@ -1,4 +1,4 @@
-package com.microservice.factura.Domain.Events.Ocurridos;
+package com.microservice.factura.Domain.Events.Occurred;
 
 /**
  *
@@ -11,5 +11,5 @@ public interface PaymentOccurred<T> {
      *
      * @param newPaymentRequest represents the object comming from the payment microservice
      */
-    void listenNewAbono(T newPaymentRequest);
+    void listenNewPayment(T newPaymentRequest);
 }

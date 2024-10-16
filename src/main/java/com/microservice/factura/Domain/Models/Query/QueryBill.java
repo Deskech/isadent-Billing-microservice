@@ -3,10 +3,11 @@ package com.microservice.factura.Domain.Models.Query;
 
 import lombok.Getter;
 
+/**
+ * Represents the patient's bill view. Only shows the relevant information for the doctor,
+ *          including the BillValues in a Currency Format.
+ */
 @Getter
-/*Represents the patient's bill view. Only shows the relevant information for the doctor,
-including the BillValues in a Currency Format.
-*/
 public class QueryBill {
     private final String remainingPaymentCurrency;
     private final String paymentCurrency;

@@ -1,6 +1,6 @@
 package com.microservice.factura.Infraestructure.Mappers.Interfaces;
 
-import com.microservice.factura.Infraestructure.Events.Publicado.Dtos.PaymentPublishedEvent;
+import com.microservice.factura.Infraestructure.Events.Published.Dtos.PaymentPublishedEvent;
 
 /**
  * Maps a string object back to class

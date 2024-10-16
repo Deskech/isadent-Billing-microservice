@@ -1,4 +1,4 @@
-package com.microservice.factura.Domain.Events.Ocurridos;
+package com.microservice.factura.Domain.Events.Occurred;
 
 /**
  *

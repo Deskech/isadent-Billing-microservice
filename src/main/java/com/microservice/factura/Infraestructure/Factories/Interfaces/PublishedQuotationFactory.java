@@ -2,7 +2,7 @@ package com.microservice.factura.Infraestructure.Factories.Interfaces;
 
 import com.microservice.factura.Application.Dtos.NewQuotationMessage;
 import com.microservice.factura.Domain.Models.CommandLine.Aggregates.BillValues;
-import com.microservice.factura.Infraestructure.Events.Publicado.Dtos.QuotationPublishedEvent;
+import com.microservice.factura.Infraestructure.Events.Published.Dtos.QuotationPublishedEvent;
 
 /**
  * This is the published quotation factory

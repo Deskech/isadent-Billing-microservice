@@ -1,7 +1,7 @@
-package com.microservice.factura.Infraestructure.Events.Ocurrido;
+package com.microservice.factura.Infraestructure.Events.Occurred;
 
 
-import com.microservice.factura.Infraestructure.Events.Publicado.Dtos.PaymentPublishedEvent;
+import com.microservice.factura.Infraestructure.Events.Published.Dtos.PaymentPublishedEvent;
 import com.microservice.factura.Infraestructure.Mappers.Interfaces.PublishedPaymentMapper;
 import com.microservice.factura.Infraestructure.Repository.Query.Actualization.QueryValuesActualization;
 import lombok.SneakyThrows;

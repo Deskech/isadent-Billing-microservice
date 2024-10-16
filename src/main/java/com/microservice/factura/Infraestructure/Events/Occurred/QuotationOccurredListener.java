@@ -1,6 +1,6 @@
-package com.microservice.factura.Infraestructure.Events.Ocurrido;
+package com.microservice.factura.Infraestructure.Events.Occurred;
 
-import com.microservice.factura.Infraestructure.Events.Publicado.Dtos.QuotationPublishedEvent;
+import com.microservice.factura.Infraestructure.Events.Published.Dtos.QuotationPublishedEvent;
 import com.microservice.factura.Infraestructure.Factories.Interfaces.PublishedQuotationFactory;
 import com.microservice.factura.Infraestructure.Persistance.Query.Actualization.QueryQuotation;
 import org.springframework.amqp.AmqpRejectAndDontRequeueException;
@@ -27,7 +27,7 @@ public class QuotationOccurredListener {
      * @param quotationPublishedEvent represents the String object of the Quotation stored in the command line database
      */
     @RabbitListener(queues = "cotizacionActualizadoQueue")
-    void actualizarCotizacion(String quotationPublishedEvent) {
+    void updateQuotation(String quotationPublishedEvent) {
        try {
            // since we receive a string it is necessary to map it to the real object
           QuotationPublishedEvent cotizacionParaActualizar = publishedQuotationFactory.deserializeString(quotationPublishedEvent);

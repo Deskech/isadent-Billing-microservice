@@ -1,7 +1,7 @@
 package com.microservice.factura.Infraestructure.Services;
 
 import com.microservice.factura.Application.Dtos.NewQuotationMessage;
-import com.microservice.factura.Domain.Events.Publicados.QuotationPublished;
+import com.microservice.factura.Domain.Events.Published.QuotationPublished;
 import com.microservice.factura.Domain.Factories.FactoryBillValues;
 import com.microservice.factura.Domain.Models.CommandLine.Aggregates.BillValues;
 import com.microservice.factura.Domain.Repository.CommandLine.BillValuesRepository;
