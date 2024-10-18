@@ -40,6 +40,28 @@ Content-Type: application/json
 "dentalProcedures": "[{\"dentalProcedure\":\"PROVISIONAL\",\"price\":180000.0},{\"dentalProcedure\":\"NUCLEO\",\"price\":550000.0}]"
 }
 ```
+### Response after storing a new payment
+_The purpose of this endpoint is to provide a faster view of the payment before it gets stored on the read side, by retrieving the information directly from the cache._
+```http
+POST /bill/payment-cache
 
+Content-Type: application/json
+```
+```json
+{
+  "patientName": "John Doe"
+}
+```
+### Outcome
+```json
+{
+   "remainingCurrency": "$729,300.00",
+   "totalCurrency": "$730,000.00",
+   "patientName": "John Doe",
+   "paymentCurrency": "$65,600.00"
+}
+```
 ## Documentation
+Comming soon...
 ## License
+Comming soon...

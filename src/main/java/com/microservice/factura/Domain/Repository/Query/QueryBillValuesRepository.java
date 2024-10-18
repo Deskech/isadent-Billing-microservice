@@ -12,5 +12,5 @@ public interface QueryBillValuesRepository {
      * @param patientName that did a new Payment
      * @return old Remaining payment and the last payment
      */
-    QueryBillValues getRestanteAndAbono(String patientName);
+    QueryBillValues getRemainingAndPayment(String patientName);
 }

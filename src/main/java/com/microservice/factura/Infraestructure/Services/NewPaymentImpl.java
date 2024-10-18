@@ -21,15 +21,18 @@ public class NewPaymentImpl implements NewPayment<NewPaymentRequest> {
     private final BillValuesRepository billValuesRepository;
     private final PaymentPublished<BillValues> paymentPublished;
     private final FactoryBillValues factoryBillValues;
-
+    private final CacheBillValues cacheBillValues;
     public NewPaymentImpl(QueryBillValuesRepository queryBillValuesRepository, BillValuesRepository billValuesRepository,
-                          PaymentPublished<BillValues> paymentPublished, FactoryBillValues factoryBillValues
+                          PaymentPublished<BillValues> paymentPublished, FactoryBillValues factoryBillValues, CacheBillValues cacheBillValues
+
     ) {
 
         this.queryBillValuesRepository = queryBillValuesRepository;
         this.billValuesRepository = billValuesRepository;
         this.paymentPublished = paymentPublished;
         this.factoryBillValues = factoryBillValues;
+        this.cacheBillValues = cacheBillValues;
+
 
     }
 
@@ -41,18 +44,29 @@ public class NewPaymentImpl implements NewPayment<NewPaymentRequest> {
     @Transactional
     @Override
     public void alternatePayment(NewPaymentRequest newPayment) {
+
         try {
+
             //we get total, restante and payment from the CUD DB.
-            QueryBillValues valoresAntiguaFactura = queryBillValuesRepository.getRestanteAndAbono(newPayment.getPatientName());
+            QueryBillValues queryBillValues = queryBillValuesRepository.getRemainingAndPayment(newPayment.getPatientName());
+
             /*Then the Bill values factory is used to create a new instance of
             * Bill vales that represents the patient's bill monetary values */
-            BillValues billValues = factoryBillValues.createBillValues(valoresAntiguaFactura, newPayment);
+            BillValues billValues = factoryBillValues.createBillValues(queryBillValues, newPayment);
+
             //we use the domain repository interface to update the patient's bill monetary values (billValues).
             billValuesRepository.updateBillValues(billValues, newPayment.getPatientName());
+
+            //we update the cache for faster api response sensation
+            cacheBillValues.updateCache(billValues, newPayment.getPatientName());
+
             //We publish the event so that the Query line database can update the data.
             paymentPublished.reportEvent(billValues, newPayment.getPatientName());
+
         } catch (RuntimeException e) {
+
             throw new RuntimeException(e);
+
         }
     }
 

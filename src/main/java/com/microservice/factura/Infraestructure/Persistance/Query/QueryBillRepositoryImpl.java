@@ -25,11 +25,10 @@ public class QueryBillRepositoryImpl implements QueryBillRepository {
      * @param patientName represents the patient's name needed to see the bill
      * @return QueryBill instance ( formatted bill's presentation )
      */
+
     @Override
     public QueryBill showBill(String patientName) {
            QueryBillEntity queryBillEntity = queryBillJpaRepository.showBill(patientName);
-           System.out.print(patientName);
-           System.out.println(queryBillEntity.getBillId());
            return queryBillMapper.toDomain(queryBillEntity);
     }
 }

@@ -41,16 +41,23 @@ public class NewQuotationImpl implements NewQuotation<NewQuotationMessage> {
     @Override
     public void saveNewQuotation(NewQuotationMessage newQuotation) {
         try {
+
             //we use the factory interface to create a new instance of our aggregate.
             BillValues billValues = factoryBillValues.billValuesFirsTime(newQuotation);
+
             //we use our Domain repository interfaces for data persistence.
             billValuesRepository.saveBillValues(billValues, newQuotation.getPatientName());
+
             // we get the dental procedures from the newQuotationMessage and stores them in the command line database.
             writeBillRepository.saveDentalProcedures(newQuotation.getImprovementPlan(), newQuotation.getPatientName());
+
             // we report the event to the query line database.
             quotationPublished.reportEvent(billValues,newQuotation);
+
         } catch (Exception e) {
+
             throw new RuntimeException(e);
+
         }
 
     }

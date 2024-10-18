@@ -25,7 +25,7 @@ public class QueryValuesImpl implements QueryBillValuesRepository {
      * @return the mapped version of the remaining payment and the last payment
      */
     @Override
-    public QueryBillValues getRestanteAndAbono(String patientName) {
+    public QueryBillValues getRemainingAndPayment(String patientName) {
         return queryValuesMapper.toDomain(queryValuesJpaRepository.getRemainingAndPayment(patientName));
     }
 }

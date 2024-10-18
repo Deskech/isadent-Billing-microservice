@@ -40,10 +40,12 @@ public class FactoryBillValuesImpl implements FactoryBillValues {
         Double payment = calculatePayment.addPayment(lastValues.getPayment(), newPaymentRequest.getPaymentValue());
         Double remainingPayment = calculateRemainingBalance.diminuirRestante(lastValues.getTotal(), payment);
         Total total= new Total(lastValues.getTotal());
+
         //we create the currency formatting
         String paymentCurrency = currency.format(payment);
         String remainingPaymentCurrency = currency.format(remainingPayment);
         String totalCurrency = currency.format(total.getTotalBill());
+
         //We create a new Instance of Value Obj
         Payment newPayment = new Payment(payment);
         Remaining newRemaining = new Remaining(remainingPayment);
@@ -64,6 +66,7 @@ public class FactoryBillValuesImpl implements FactoryBillValues {
         Double remainingPayment = calculateRemainingBalance.diminuirRestante(newQuotationMessage.getTotal(), newQuotationMessage.getPayment());
         Remaining newRemaining = new Remaining(remainingPayment);
         Total total = new Total(newQuotationMessage.getTotal());
+
         //we set our Currency Format this is necessary for the view format
         String totalCurrency = currency.format(total.getTotalBill());
         String remainingPaymentCurrency = currency.format(newRemaining.getRemainingPayment());
